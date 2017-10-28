@@ -20,9 +20,8 @@ SVRSTS_Admin_Notices::instance(__FILE__);
  * Plugin code
  */
 
-// Block direct calls
-if (!function_exists('add_action'))
-	die;
+// Avoid direct calls
+defined('ABSPATH') or die('No soup for you!');
 
 // Admin check
 if (!is_admin())
