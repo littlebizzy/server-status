@@ -1,17 +1,20 @@
 === Server Status ===
 
 Contributors: littlebizzy
-Tags: server, OS, memory, CPU, load average, RAM, database, disk space, PHP, info, stats
+Tags: server, system, status, stats, system
 Requires at least: 4.4
 Tested up to: 4.8
 Requires PHP: 7.0
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Prefix: SVRSTS
 
 Useful statistics about the server OS, CPU, RAM, load average, memory usage, IP address, hostname, timezone, disk space, PHP, MySQL, caches, etc.
 
 == Description ==
+
+Useful statistics about the server OS, CPU, RAM, load average, memory usage, IP address, hostname, timezone, disk space, PHP, MySQL, caches, etc.
 
 Server Status is a simple WordPress plugin for quickly displaying important statistics and configuration settings in regard to your server and WordPress environment. Specifically, the plugin creates a single dashboard widget along with a small line of data in the WP Admin footer with key info in regard to memory usage, PHP configuration, and several other useful items.
 
@@ -20,28 +23,6 @@ This plugin does NOT aim to replace the need for researching `phpinfo` or `wp-co
 We've purposefully avoided having a "settings" page for this plugin in order to keep things as simple as possible. However, as with any dashboard widget, you can easily hide the Server Status widget if needed (although not the footer data).
 
 The code aims to be as minimalistic as possible while adhering to best practices. It blocks direct calls of its PHP files for security reasons and also implements transients so that data is briefly cached for top speed and performance (although "Memory Usage" and "Load Average" are not currently cached with transients).
-
-Compatibility:
-
-* Meant for Linux servers
-* Minimum PHP version: 5.4.3
-* Designed for: PHP 7+ and MySQL 5.7+
-* Can be used as a "Must Use" plugin (mu-plugins)
-
-Future plugin goals:
-
-* Localization (translation support)
-* Transient experimentation
-* More features (based on user suggestions)
-* Code maintenance/improvements
-
-Code inspired by:
-
-* [WP Memory Usage](https://wordpress.org/plugins/wp-memory-usage/)
-* [WP System Health](https://wordpress.org/plugins/wp-system-health/)
-* [TCP Memory Usage](https://wordpress.org/plugins/tpc-memory-usage/)
-* [WP Server Stats](https://wordpress.org/plugins/wp-server-stats/)
-* [Server Monitor](https://wordpress.org/plugins/server-monitor/)
 
 Some details about the plugin implementation:
 
@@ -74,12 +55,67 @@ The code has been tested on PHP 7 with no errors.
 Direct HTTP requests to any file does not produce error log records.
 All classes are implemented with static methods, so there are no objects instances in memory.
 
-*NOTE: We released this plugin in response to our managed hosting clients asking for better access to their server environment, and our primary goal will likely remain supporting that purpose. Although we are 100% open to fielding requests from the WordPress community, we kindly ask that you consider all of the above mentioned goals before leaving reviews of this plugin, thanks!*
+#### Compatibility ####
+
+This plugin has been designed for use on LEMP (Nginx) web servers with PHP 7.0 and MySQL 5.7 to achieve best performance. All of our plugins are meant for single site WordPress installations only; for both performance and security reasons, we highly recommend against using WordPress Multisite for the vast majority of projects.
+
+#### Plugin Features ####
+
+* Settings Page: No
+* PRO Version Available: No
+* Includes Media: No
+* Includes CSS: Yes
+* Database Storage: No
+  * Transients: Yes
+  * Options: Yes
+* Database Queries: Backend only
+* Must-Use Support: Yes
+* Multisite Support: No
+* Uninstalls Data: Yes
+
+#### Code Inspiration ####
+
+This plugin was partially inspired either in "code or concept" by the open-source software and discussions mentioned below:
+
+* [WP Memory Usage](https://wordpress.org/plugins/wp-memory-usage/)
+* [WP System Health](https://wordpress.org/plugins/wp-system-health/)
+* [TCP Memory Usage](https://wordpress.org/plugins/tpc-memory-usage/)
+* [WP Server Stats](https://wordpress.org/plugins/wp-server-stats/)
+* [Server Monitor](https://wordpress.org/plugins/server-monitor/)
+
+#### Recommended Plugins ####
+
+We invite you to check out a few other related free plugins that our team has also produced that you may find especially useful:
+
+* [Force HTTPS](https://wordpress.org/plugins/force-https-littlebizzy/)
+* [Remove Query Strings](https://wordpress.org/plugins/remove-query-strings-littlebizzy/)
+* [Duplicate Post](https://wordpress.org/plugins/duplicate-post-littlebizzy/)
+* [Maintenance Mode](https://wordpress.org/plugins/maintenance-mode-littlebizzy/)
+* [Virtual Robots.txt](https://wordpress.org/plugins/virtual-robotstxt-littlebizzy/)
+* [Disable Emojis](https://wordpress.org/plugins/disable-emojis-littlebizzy/)
+* [Disable XML-RPC](https://wordpress.org/plugins/disable-xml-rpc-littlebizzy/)
+* [404 To Homepage](https://wordpress.org/plugins/404-to-homepage-littlebizzy/)
+* [Google Analytics](https://wordpress.org/plugins/ga-littlebizzy/)
+* [Export Database](https://wordpress.org/plugins/export-database-littlebizzy/)
+
+#### Special Thanks ####
+
+We thank the following groups for their generous contributions to the WordPress community which have particularly benefited us in developing our own free plugins and paid services:
+
+* [Automattic](https://automattic.com)
+* [Delicious Brains](https://deliciousbrains.com)
+* [Roots](https://roots.io)
+* [rtCamp](https://rtcamp.com)
+* [WP Tavern](https://wptavern.com)
+
+#### Disclaimer ####
+
+We released this plugin in response to our managed hosting clients asking for better access to their server, and our primary goal will remain supporting that purpose. Although we are 100% open to fielding requests from the WordPress community, we kindly ask that you keep the above mentioned goals in mind, thanks!
 
 == Installation ==
 
 1. Upload the plugin files to `/wp-content/plugins/server-status-littlebizzy`
-2. Activate the plugin within the WP Admin
+2. Activate via WP Admin > WP Admin
 3. Check your WP Admin dashboard (admin users only) and footer area to view the statistics
 4. For alternative layouts put either `define('SVRSTS_DISPLAY', 'grid');` or `define('SVRSTS_DISPLAY', 'widefat');` somewhere in your `wp-config` settings
 
@@ -103,11 +139,16 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 
 == Changelog ==
 
+= 1.2.6 =
+* optimized plugin code
+* updated recommended plugins
+* added rating request
+
 = 1.2.5 =
 * updated recommended plugins
 
 = 1.2.4 =
-* recommended plugins
+* added recommended plugins
 
 = 1.2.3 =
 * tested with WordPress 4.8
@@ -135,7 +176,7 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 * Alternative layout options added, which must be defined within `wp-config`
 
 = 1.1.0 =
-* plugin re-written with PHP 7 and Transients API
+* re-written with PHP 7 and Transients API
 
 = 1.0.0 =
 * initial release (private)
