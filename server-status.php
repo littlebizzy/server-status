@@ -3,28 +3,36 @@
 Plugin Name: Server Status
 Plugin URI: https://www.littlebizzy.com/plugins/server-status
 Description: Useful statistics about the server OS, CPU, RAM, load average, memory usage, IP address, hostname, timezone, disk space, PHP, MySQL, caches, etc.
-Version: 1.2.5
+Version: 1.2.6
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Prefix: SVRSTS
 */
 
+// Admin Notices module
+require_once dirname(__FILE__).'/admin-notices.php';
+SVRSTS_Admin_Notices::instance(__FILE__);
 
-/* Checks */
 
-// Avoid direct calls
-defined('ABSPATH') or die('No soup for you!');
+/**
+ * Plugin code
+ */
 
-// Check admin area
+// Block direct calls
+if (!function_exists('add_action'))
+	die;
+
+// Admin check
 if (!is_admin())
 	return;
 
-// This plugin constants
+// Plugin constants
 define('SVRSTS_FILE', __FILE__);
 define('SVRSTS_PATH', dirname(SVRSTS_FILE));
-define('SVRSTS_VERSION', '1.2.1');
-define('SVRSTS_REFRESH', '30'); // Seconds
+define('SVRSTS_VERSION', '1.2.6');
+define('SVRSTS_REFRESH', '30'); // seconds
 
 
 /* Dashboard */
@@ -49,6 +57,3 @@ function svrsts_admin_footer_text($text) {
 	require_once(SVRSTS_PATH.'/admin/footer.php');
 	return SVRSTS_Admin_Footer::add_text($text);
 }
-
-require_once( SVRSTS_PATH.'/core/admin-suggestions.php' );
-SVRSTS_Admin_Suggestions::instance();
