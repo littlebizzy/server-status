@@ -28,7 +28,7 @@ final class SVRSTS_Admin_Notices {
 	/**
 	 * Plugin suggestions
 	 */
-  private $days_dismissing_suggestions = 150;
+  private $days_dismissing_suggestions = 75;
 	private $suggestions_message = '%plugin% recommends the following free plugins:';
   private $suggestions = array(
     'force-https-littlebizzy' => array(
