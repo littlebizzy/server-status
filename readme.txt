@@ -16,6 +16,12 @@ Useful statistics about the server OS, CPU, RAM, load average, memory usage, IP 
 
 Useful statistics about the server OS, CPU, RAM, load average, memory usage, IP address, hostname, timezone, disk space, PHP, MySQL, caches, etc.
 
+* [Plugin Homepage](https://www.littlebizzy.com/plugins/server-status)
+* [Plugin GitHub](https://github.com/littlebizzy/server-status/)
+* [SlickStack.io](https://slickstack.io)
+
+#### The Long Version ####
+
 Server Status is a simple WordPress plugin for quickly displaying important statistics and configuration settings in regard to your server and WordPress environment. Specifically, the plugin creates a single dashboard widget along with a small line of data in the WP Admin footer with key info in regard to memory usage, PHP configuration, and several other useful items.
 
 This plugin does NOT aim to replace the need for researching `phpinfo` or `wp-config` settings when extensive server statistics or configuration settings are needed. Rather, it aims to highlight the most commonly required settings needed by WordPress developers in an effort to save time and improve productivity.
@@ -62,16 +68,21 @@ This plugin has been designed for use on LEMP (Nginx) web servers with PHP 7.0 a
 #### Plugin Features ####
 
 * Settings Page: No
-* PRO Version Available: No
-* Includes Media: No
-* Includes CSS: Yes
-* Database Storage: No
-  * Transients: Yes
+* Premium Version Available: No
+* Includes Media (Images, Icons, Etc): No
+* Includes CSS: No
+* Database Storage: Yes
+  * Transients: No
   * Options: Yes
-* Database Queries: Backend only
-* Must-Use Support: Yes
+  * Creates New Tables: No
+* Database Queries: Backend Only
+* Must-Use Support: Yes (Use With [Autoloader](https://github.com/littlebizzy/autoloader))
 * Multisite Support: No
 * Uninstalls Data: Yes
+
+#### WP Admin Notices ####
+
+This plugin generates multiple [Admin Notices](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices) in the WP Admin dashboard. The first is a notice that fires during plugin activation which recommends several related free plugins that we believe will enhance this plugin's features; this notice will re-appear approximately once every 5 months as our code and recommendations evolve. The second is a notice that fires a few days after plugin activation which asks for a 5-star rating of this plugin on its WordPress.org profile page. This notice will re-appear approximately once every 8 months. These notices can be dismissed by clicking the (x) symbol in the upper right of the notice box. These notices may confuse certain users, but are appreciated by the majority of our userbase, who understand that these notices support our free contributions to the WordPress community. If you feel that these notices are too "annoying" than we encourage you to consider one or more of our upcoming premium plugins that combine several free plugin features into a single control panel. Another alternative would be to develop your own plugins for WordPress, if you feel that supporting free plugin authors is not something that interests you.
 
 #### Code Inspiration ####
 
