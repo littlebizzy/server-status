@@ -72,7 +72,7 @@ This plugin has been designed for use on LEMP (Nginx) web servers with PHP 7.0 a
 * Includes Media (Images, Icons, Etc): No
 * Includes CSS: No
 * Database Storage: Yes
-  * Transients: No
+  * Transients: Yes
   * Options: Yes
   * Creates New Tables: No
 * Database Queries: Backend Only
