@@ -199,6 +199,7 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 == Changelog ==
 
 = 1.2.7 =
+* updated plugin meta
 * updated recommended plugins
 * added support for `define('DISABLE_NAG_NOTICES', true);`
 
