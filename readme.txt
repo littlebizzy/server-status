@@ -216,7 +216,7 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 * added recommended plugins
 
 = 1.2.3 =
-* tested with WordPress 4.8
+* tested with WP 4.8
 * updated plugin meta
 
 = 1.2.2 =
