@@ -3,7 +3,7 @@
 Contributors: littlebizzy
 Tags: server, system, status, stats, health
 Requires at least: 4.4
-Tested up to: 4.8
+Tested up to: 4.9
 Requires PHP: 7.0
 Stable tag: 1.2.7
 License: GPLv3
@@ -199,6 +199,7 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 == Changelog ==
 
 = 1.2.7 =
+* tested with WP 4.9
 * updated plugin meta
 * updated recommended plugins
 * added support for `define('DISABLE_NAG_NOTICES', true);`
