@@ -3,7 +3,7 @@
 Plugin Name: Server Status
 Plugin URI: https://www.littlebizzy.com/plugins/server-status
 Description: Useful statistics about the server OS, CPU, RAM, load average, memory usage, IP address, hostname, timezone, disk space, PHP, MySQL, caches, etc.
-Version: 1.2.7
+Version: 1.2.8
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -30,7 +30,7 @@ if (!is_admin())
 // Plugin constants
 define('SVRSTS_FILE', __FILE__);
 define('SVRSTS_PATH', dirname(SVRSTS_FILE));
-define('SVRSTS_VERSION', '1.2.7');
+define('SVRSTS_VERSION', '1.2.8');
 define('SVRSTS_REFRESH', '30'); // seconds
 
 
