@@ -1,6 +1,7 @@
 === Server Status ===
 
 Contributors: littlebizzy
+Donate link: https://www.patreon.com/littlebizzy
 Tags: server, system, status, stats, health
 Requires at least: 4.4
 Tested up to: 4.9
