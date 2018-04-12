@@ -1,4 +1,4 @@
-=== Server Status ===
+=== Server Status (System Status: CPU, RAM, IP, etc) ===
 
 Contributors: littlebizzy
 Donate link: https://www.patreon.com/littlebizzy
