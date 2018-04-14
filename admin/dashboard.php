@@ -73,7 +73,7 @@ class SVRSTS_Admin_Dashboard {
 		SVRSTS_Core_Status::save_data();
 
 		// Check display
-		$display = defined('SVRSTS_DISPLAY')? SVRSTS_DISPLAY : false;
+		$display = defined('SERVER_STATUS_DISPLAY')? SERVER_STATUS_DISPLAY : false;
 
 		// Table display mode
 		if ('grid' == $display) {
