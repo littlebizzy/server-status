@@ -1,4 +1,4 @@
-=== Server Status (System Status: CPU, RAM, IP, etc) ===
+=== Server Status (System Status) – CPU, RAM, IP, PHP, etc ===
 
 Contributors: littlebizzy
 Donate link: https://www.patreon.com/littlebizzy
@@ -6,7 +6,7 @@ Tags: server, system, status, stats, health
 Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
-Stable tag: 1.2.9
+Stable tag: 1.2.10
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: SVRSTS
@@ -18,8 +18,12 @@ Useful statistics about the server OS, CPU, RAM, load average, memory usage, IP 
 Useful statistics about the server OS, CPU, RAM, load average, memory usage, IP address, hostname, timezone, disk space, PHP, MySQL, caches, etc.
 
 * [**Join our FREE Facebook group for support!**](https://www.facebook.com/groups/littlebizzy/)
+* [**Worth a 5-star review? Thank you!**](https://wordpress.org/support/plugin/server-status-littlebizzy/reviews/?rate=5#new-post)
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/server-status)
 * [Plugin GitHub](https://github.com/littlebizzy/server-status)
+
+*Our related OSS projects:*
+
 * [SlickStack](https://slickstack.io)
 * [WP Lite Boilerpate](https://wplite.org)
 * [Starter Theme](https://starter.littlebizzy.com)
@@ -33,6 +37,10 @@ This plugin does NOT aim to replace the need for researching `phpinfo` or `wp-co
 We've purposefully avoided having a "settings" page for this plugin in order to keep things as simple as possible. However, as with any dashboard widget, you can easily hide the Server Status widget if needed (although not the footer data).
 
 The code aims to be as minimalistic as possible while adhering to best practices. It blocks direct calls of its PHP files for security reasons and also implements transients so that data is briefly cached for top speed and performance (although "Memory Usage" and "Load Average" are not currently cached with transients).
+
+You may change display style using the following constant:
+
+    define('SERVER_STATUS_DISPLAY', 'grid | widefat');
 
 Some details about the plugin implementation:
 
@@ -68,6 +76,13 @@ All classes are implemented with static methods, so there are no objects instanc
 #### Compatibility ####
 
 This plugin has been designed for use on LEMP (Nginx) web servers with PHP 7.0 and MySQL 5.7 to achieve best performance. All of our plugins are meant for single site WordPress installations only; for both performance and security reasons, we highly recommend against using WordPress Multisite for the vast majority of projects.
+
+#### Defined Constants ####
+
+The following defined constants are supported by this plugin:
+
+* `define('SERVER_STATUS_DISPLAY', 'grid | widefat');`
+* `define('DISABLE_NAG_NOTICES', true);`
 
 #### Plugin Features ####
 
@@ -210,6 +225,11 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 
 == Changelog ==
 
+= 1.2.10 =
+* added support for `define('SERVER_STATUS_DISPLAY', 'grid | widefat');`
+* (old spelling `SVRSTS_DISPLAY` no longer supported)
+* updated plugin meta
+
 = 1.2.9 =
 * added warning for Multisite installations
 * updated recommended plugins
@@ -223,10 +243,10 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 * updated recommended plugins
 * partial support for `define('DISABLE_NAG_NOTICES', true);`
 
-= 1.2.6 =
+= 1.2.6 
 * optimized plugin code
+* added rating request notice
 * updated recommended plugins
-* added rating request
 
 = 1.2.5 =
 * updated recommended plugins
