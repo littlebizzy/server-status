@@ -226,7 +226,7 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 == Changelog ==
 
 = 1.2.10 =
-* added support for `define('SERVER_STATUS_DISPLAY', 'grid | widefat');`
+* BREAKING CHANGE: added support for `define('SERVER_STATUS_DISPLAY', 'grid | widefat');`
 * (old spelling `SVRSTS_DISPLAY` no longer supported)
 * updated plugin meta
 
