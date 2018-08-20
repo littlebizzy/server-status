@@ -6,7 +6,7 @@ Tags: server, system, status, stats, health
 Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: SVRSTS
@@ -224,6 +224,9 @@ This plugin does not have a settings page and is designed for speed and simplici
 Please avoid leaving negative reviews in order to get a feature implemented. Instead, we kindly ask that you post your feedback on the wordpress.org support forums by tagging this plugin in your post. If needed, you may also contact our homepage.
 
 == Changelog ==
+
+= 1.3.1 =
+* updated recommended plugins
 
 = 1.3.0 = 
 * versioning correction (major changes in 1.2.10)
