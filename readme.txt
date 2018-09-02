@@ -6,7 +6,7 @@ Tags: server, system, status, stats, health
 Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: SVRSTS
@@ -225,15 +225,18 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 
 == Changelog ==
 
+= 1.3.2 =
+* updated plugin meta
+
 = 1.3.1 =
 * updated recommended plugins
 
 = 1.3.0 = 
 * versioning correction (major changes in 1.2.10)
-* (no other code changes made)
+* (no code changes)
 
 = 1.2.10 =
-* BREAKING CHANGE: added support for `define('SERVER_STATUS_DISPLAY', 'grid | widefat');`
+* added support for `define('SERVER_STATUS_DISPLAY', 'grid | widefat');`
 * (old spelling `SVRSTS_DISPLAY` no longer supported)
 * updated plugin meta
 
@@ -242,13 +245,13 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 * updated recommended plugins
 
 = 1.2.8 =
-* better support for `define('DISABLE_NAG_NOTICES', true);`
+* better support for `DISABLE_NAG_NOTICES`
 
 = 1.2.7 =
 * tested with WP 4.9
-* updated plugin meta
+* partial support for `DISABLE_NAG_NOTICES`
 * updated recommended plugins
-* partial support for `define('DISABLE_NAG_NOTICES', true);`
+* updated plugin meta
 
 = 1.2.6 
 * optimized plugin code
@@ -259,7 +262,7 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 * updated recommended plugins
 
 = 1.2.4 =
-* added recommended plugin notices
+* added recommended plugins notice
 
 = 1.2.3 =
 * tested with WP 4.8
@@ -281,13 +284,14 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 * Opcache now on a different line than Page Cache
 
 = 1.1.1 =
-* Database Charset/Collate layout tweaked (was backwards).
+* Database Charset/Collate layout tweaked (was backwards)
 * Readme.txt revised for wordpress.org and minor changes to "short" description, etc in `server-status.php`
 * Default layout changed to be much more compressed to save space.
 * Alternative layout options added, which must be defined within `wp-config`
 
 = 1.1.0 =
 * entirely recoded with PHP 7 and Transients API
+* tested with PHP 7.0
 
 = 1.0.0 =
 * initial release (private)
