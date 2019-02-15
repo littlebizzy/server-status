@@ -1,4 +1,4 @@
-=== Server Status (System Status) - CPU, RAM, PHP, etc ===
+=== Server Status (System Status) ===
 
 Contributors: littlebizzy
 Donate link: https://www.patreon.com/littlebizzy
@@ -6,7 +6,7 @@ Tags: server, system, status, stats, health
 Requires at least: 4.4
 Tested up to: 5.0
 Requires PHP: 7.0
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: SVRSTS
@@ -151,6 +151,10 @@ This plugin does not have a settings page and is designed for speed and simplici
 Please avoid leaving negative reviews in order to get a feature implemented. Instead, use our free Facebook group.
 
 == Changelog ==
+
+= 1.4.1 =
+* added more variables to /admin/footer.php module
+* tweaked footer data formatting
 
 = 1.4.0 =
 * tested with WP 5.0
