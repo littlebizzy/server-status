@@ -7,11 +7,12 @@ Useful statistics about the server OS, CPU, RAM, load average, memory usage, IP 
 
 ### Defined Constants
 
-    /* Plugin Meta */
+    /** Plugin Meta */
     define('DISABLE_NAG_NOTICES', true);
     
-    /* Server Status Functions */
-    define('SERVER_STATUS_DISPLAY', 'widefat');
+    /** Server Status Functions */
+    define('SERVER_STATUS', true); // default = true
+    define('SERVER_STATUS_DISPLAY', 'widefat'); // default = blank (default)
 
 ### Compatibility
 
