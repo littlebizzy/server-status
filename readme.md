@@ -2,23 +2,39 @@
 
 Useful statistics about the server OS, CPU, RAM, load average, memory usage, IP address, hostname, timezone, disk space, PHP, MySQL, caches, etc. 
 
-* [Plugin Homepage (LittleBizzy.com)](https://www.littlebizzy.com/plugins/server-status)
-* [Free Facebook Group](https://www.facebook.com/groups/littlebizzy/)
+* [Plugin Homepage](https://www.littlebizzy.com/plugins/server-status)
+* [Download Latest Version (ZIP)](https://github.com/littlebizzy/server-status/archive/1.4.1.zip)
+* [**Become A LittleBizzy.com Member Today!**](https://www.littlebizzy.com/members)
 
 ### Defined Constants
 
     /** Plugin Meta */
-    define('DISABLE_NAG_NOTICES', true);
+    define('AUTOMATIC_UPDATE_PLUGINS', false); // default = false
+    define('DISABLE_NAG_NOTICES', true); // default = true
     
     /** Server Status Functions */
     define('SERVER_STATUS', true); // default = true
     define('SERVER_STATUS_DISPLAY', 'widefat'); // default = blank (default)
+
+### Included Modules
+
+* (n/a)
 
 ### Compatibility
 
 This plugin has been designed for use on [SlickStack](https://slickstack.io) web servers with PHP 7.2 and MySQL 5.7 to achieve best performance. All of our plugins are meant for single site WordPress installations only — for both performance and usability reasons, we strongly recommend avoiding WordPress Multisite for the vast majority of your projects.
 
 Any of our WordPress plugins may also be loaded as "Must-Use" plugins (meaning that they load first, and cannot be deactivated) by using our free [Autoloader](https://github.com/littlebizzy/autoloader) script in the `mu-plugins` directory.
+
+### Our Philosophy
+
+> "Decisions, not options." — WordPress.org
+
+> "Everything should be made as simple as possible, but not simpler." — Albert Einstein, et al
+
+> "Write programs that do one thing and do it well... write programs to work together." — Doug McIlroy
+
+> "The innovation that this industry talks about so much is bullshit. Anybody can innovate... 99% of it is 'get the work done.' The real work is in the details." — Linus Torvalds
 
 ### Support Issues
 
